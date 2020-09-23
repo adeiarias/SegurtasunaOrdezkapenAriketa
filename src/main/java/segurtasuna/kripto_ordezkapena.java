@@ -28,7 +28,6 @@ public class kripto_ordezkapena {
         }
 
         public String deszifratu(String mezua) {
-            System.out.println(gakoa.charAt(0));
             emaitza = "";
             String mez = mezua.toUpperCase();
             for(int i = 0; i < mez.length(); i++) {
