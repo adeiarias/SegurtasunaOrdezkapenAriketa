@@ -16,7 +16,6 @@ public class kripto_ordezkapen_main {
         System.out.println("ZEIN DA ERABILI NAHI DUZUN GAKOA?");
         String gako = sc.nextLine();
         kripto_ordezkapena k = new kripto_ordezkapena(gako);
-        sc.nextLine();
         String mezua;
         if (n == 1) {
             System.out.println("ZER MEZU ENKRIPTATU NAHI DUZU?");

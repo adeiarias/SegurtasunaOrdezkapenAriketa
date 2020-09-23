@@ -1,9 +1,6 @@
 package segurtasuna;
 
 import java.util.Arrays;
-
-
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class kripto_ordezkapena {
@@ -16,42 +13,43 @@ public class kripto_ordezkapena {
         }
 
         public String zifratu(String mezua) {
-            this.emaitza = "";
-            for(int i = 0; i < mezua.length(); ++i) {
-                if (mezua.charAt(i) == ' ') {
-                    this.emaitza = this.emaitza + " ";
+            emaitza = "";
+            String mez = mezua.toUpperCase();
+            for(int i = 0; i < mez.length(); ++i) {
+                if (mez.charAt(i) == ' ') {
+                    emaitza = emaitza + " ";
                 } else {
-                    int indizea = Arrays.asList(this.alfabetoa).indexOf(mezua.charAt(i));
-                    String var10001 = this.emaitza;
-                    this.emaitza = var10001 + Character.toString(this.gakoa.charAt(indizea));
+                    int indizea = Arrays.asList(alfabetoa).indexOf(mez.charAt(i));
+                    emaitza = emaitza + Character.toString(gakoa.charAt(indizea));
                 }
             }
 
-            return this.emaitza;
+            return emaitza;
         }
 
         public String deszifratu(String mezua) {
-            this.emaitza = "";
-            for(int i = 0; i < mezua.length(); ++i) {
-                if (mezua.charAt(i) == ' ') {
-                    this.emaitza = this.emaitza + " ";
+            emaitza = "";
+            String mez = mezua.toUpperCase();
+            for(int i = 0; i < mez.length(); ++i) {
+                if (mez.charAt(i) == ' ') {
+                    emaitza = emaitza + " ";
                 } else {
-                    int indizea = this.gakoa.indexOf(mezua.charAt(i));
-                    String var10001 = this.emaitza;
-                    this.emaitza = var10001 + Character.toString(this.alfabetoa[indizea]);
+                    int indizea = gakoa.indexOf(mez.charAt(i));
+                    emaitza = emaitza + Character.toString(alfabetoa[indizea]);
                 }
             }
 
-            return this.emaitza;
+            return emaitza;
         }
 
         private String sortuGakoa(String gako){
             String g = " ";
+            String ga = gako.toUpperCase();
             HashSet<Character> lista = new HashSet<Character>();
-            for(int i = 0; i < gako.length(); i++){
-                if(!lista.contains(gako.charAt(i))){
-                    lista.add(gako.charAt(i));
-                    g = g + Character.toString(gako.charAt(i));
+            for(int i = 0; i < ga.length(); i++){
+                if(!lista.contains(ga.charAt(i))){
+                    lista.add(ga.charAt(i));
+                    g = g + Character.toString(ga.charAt(i));
                 }
             }
             //ASCII kodearen bitartez falta diren karaktereak sartuko ditugu String-ean
