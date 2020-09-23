@@ -15,7 +15,7 @@ public class kripto_ordezkapena {
         public String zifratu(String mezua) {
             emaitza = "";
             String mez = mezua.toUpperCase();
-            for(int i = 0; i < mez.length(); ++i) {
+            for(int i = 0; i < mez.length(); i++) {
                 if (mez.charAt(i) == ' ') {
                     emaitza = emaitza + " ";
                 } else {
@@ -28,9 +28,10 @@ public class kripto_ordezkapena {
         }
 
         public String deszifratu(String mezua) {
+            System.out.println(gakoa.charAt(0));
             emaitza = "";
             String mez = mezua.toUpperCase();
-            for(int i = 0; i < mez.length(); ++i) {
+            for(int i = 0; i < mez.length(); i++) {
                 if (mez.charAt(i) == ' ') {
                     emaitza = emaitza + " ";
                 } else {
@@ -43,7 +44,7 @@ public class kripto_ordezkapena {
         }
 
         private String sortuGakoa(String gako){
-            String g = " ";
+            String g = "";
             String ga = gako.toUpperCase();
             HashSet<Character> lista = new HashSet<Character>();
             for(int i = 0; i < ga.length(); i++){
